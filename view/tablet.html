@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda de Computadores</title>
-  <link rel="stylesheet" href="/style/computador.css" />
+  <title>Tienda de Tabletas</title>
+  <link rel="stylesheet" href="/style/tablet.css" />
   <link rel="stylesheet" href="../style/carrito.css">
 
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="/index.html" class="logo">TechStore</a>
@@ -20,10 +21,10 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
       <div class="nav-icons">
-      <a href="#" id="ver-carrito" class="cart-icon" title="Carrito de compras">
-      🛒<span id="contador-carrito">0</span>
-      </a>
-        <a href="/templates/login.html" class="login-btn">Iniciar Sesión</a>
+        <a href="#" id="ver-carrito" class="cart-icon" title="Carrito de compras">
+        🛒<span id="contador-carrito">0</span>
+        </a>
+        <a href="/view/login.html" class="login-btn">Iniciar Sesión</a>
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -49,7 +50,7 @@
   <!-- Encabezado -->
   <header>
     <div class="container">
-      <h1>Computador Shop 💻</h1>
+      <h1>Tablet Shop 📱</h1>
       <nav>
         <ul>
           <li><a href="#productos">Productos</a></li>
@@ -62,8 +63,8 @@
   <section class="banner">
     <div class="container">
       <video autoplay muted loop playsinline>
-        <source src="/assets/computadoresvideo.mp4" type="video/mp4" />
-        Tu navegador no soporta videos.
+        <source src="/assets/tabletsvideo.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
       </video>
     </div>
   </section>
@@ -76,73 +77,73 @@
 
         <!-- Producto 1 -->
         <div class="producto">
-          <img src="/assets/Laptop ASUS VivoBook 15.png" alt="Laptop Asus" />
-          <h3>Laptop ASUS VivoBook 15</h3>
-          <p>Intel i5, 8GB RAM, SSD 512GB, 15.6".</p>
+          <img src="/assets/iPad 10ª Generación 10.9.webp" alt="iPad 10a Gen" />
+          <h3>iPad 10ª Generación 10.9"</h3>
+          <p>64GB, A14 Bionic, iPadOS, USB-C.</p>
           <span>$2.399.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 2 -->
         <div class="producto">
-          <img src="/assets/Apple MacBook Air M2.webp" alt="MacBook Air" />
-          <h3>Apple MacBook Air M2</h3>
-          <p>Chip M2, 256GB SSD, 13".</p>
-          <span>$5.499.000 COP</span>
+          <img src="/assets/Samsung Galaxy Tab S9.webp" alt="Galaxy Tab S9" />
+          <h3>Samsung Galaxy Tab S9</h3>
+          <p>11", AMOLED, S Pen incluido, Snapdragon 8 Gen 2.</p>
+          <span>$3.499.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 3 -->
         <div class="producto">
-          <img src="/assets/PC Gamer RGB Ryzen 5.webp" alt="PC Gamer" />
-          <h3>PC Gamer RGB Ryzen 5</h3>
-          <p>16GB RAM, SSD 1TB, RTX 3060.</p>
-          <span>$4.990.000 COP</span>
+          <img src="/assets/Lenovo Tab M10 Plus.jpg" alt="Lenovo Tab M10" />
+          <h3>Lenovo Tab M10 Plus</h3>
+          <p>10.6", 4GB RAM, 64GB, Android 12.</p>
+          <span>$799.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 4 -->
         <div class="producto">
-          <img src="/assets/mackbook air.webp" alt="Monitor" />
-          <h3>Macbook Air M4</h3>
-          <p>Full HD, IPS, HDMI, 75Hz.</p>
-          <span>$1.150.000 COP</span>
+          <img src="/assets/Amazon Fire HD 10.webp" alt="Amazon Fire HD 10" />
+          <h3>Amazon Fire HD 10</h3>
+          <p>64GB, Alexa, Full HD, ideal para streaming.</p>
+          <span>$649.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 5 -->
         <div class="producto">
-          <img src="/assets/Teclado Mecánico Redragon.jpg" alt="Teclado Mecánico" />
-          <h3>Teclado Mecánico Redragon</h3>
-          <p>RGB, switches rojos, retroiluminado.</p>
-          <span>$169.000 COP</span>
+          <img src="/assets/Apple Pencil (1ra gen).jpeg" alt="Apple Pencil" />
+          <h3>Apple Pencil (1ra gen)</h3>
+          <p>Compatible con iPads, precisión profesional.</p>
+          <span>$549.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 6 -->
         <div class="producto">
-          <img src="/assets/Mouse Gamer Logitech G5022.webp" alt="Mouse Gamer" />
-          <h3>Mouse Gamer Logitech G502</h3>
-          <p>RGB, 25.600 DPI, botones programables.</p>
-          <span>$229.000 COP</span>
+          <img src="/assets/Funda con Teclado Bluetooth.webp" alt="Funda con teclado" />
+          <h3>Funda con Teclado Bluetooth</h3>
+          <p>Compatible con iPad, Samsung, Lenovo.</p>
+          <span>$119.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 7 -->
         <div class="producto">
-          <img src="/assets/HP 245 G8.webp" alt="Laptop HP" />
-          <h3>HP 245 G8</h3>
-          <p>Ryzen 3, 8GB RAM, SSD 256GB, 14".</p>
-          <span>$1.799.000 COP</span>
+          <img src="/assets/Soporte Plegable para Tabletas.webp" alt="Soporte" />
+          <h3>Soporte Plegable para Tabletas</h3>
+          <p>Ángulo ajustable, base antideslizante.</p>
+          <span>$39.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 8 -->
         <div class="producto">
-          <img src="/assets/Soporte Ajustable para Laptop.jpg" alt="Soporte" />
-          <h3>Soporte Ajustable para Laptop</h3>
-          <p>Aluminio, ángulo ajustable, antideslizante.</p>
-          <span>$89.000 COP</span>
+          <img src="/assets/Protector de Pantalla 10.1.jpg" alt="Protector" />
+          <h3>Protector de Pantalla 10.1”</h3>
+          <p>Vidrio templado resistente a golpes y rayones.</p>
+          <span>$29.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
@@ -152,10 +153,10 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 . Todos los derechos reservados.</p>
+    <p>© 2025 Tablet Shop. Todos los derechos reservados.</p>
   </footer>
 
- <script src="carrito.js"></script> 
+   <script src="carrito.js"></script> 
 
 </body>
 
