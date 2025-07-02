@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tienda de Cámaras</title>
   <link rel="stylesheet" href="/style/camara.css" />
+  <link rel="stylesheet" href="../style/carrito.css">
+
 </head>
 
 <body>
@@ -18,7 +20,9 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
       <div class="nav-icons">
-        <a href="#carrito" class="cart-icon" title="Carrito de compras">🛒</a>
+        <a href="#" id="ver-carrito" class="cart-icon" title="Carrito de compras">
+        🛒<span id="contador-carrito">0</span>
+        </a>
         <a href="/templates/login.html" class="login-btn">Iniciar Sesión</a>
         <div class="hamburger">
           <span></span>
@@ -28,6 +32,20 @@
       </div>
     </div>
   </nav>
+
+<div id="carrito-overlay" class="carrito-overlay"></div>
+<div id="carrito" class="carrito-container">
+    <div class="carrito-header">
+        <h2>Tu Carrito 🛒</h2>
+        <button id="cerrar-carrito" class="cerrar-carrito-btn" title="Cerrar">&times;</button>
+    </div>
+    <div id="carrito-items" class="carrito-items"></div>
+    <div class="carrito-footer">
+        <h3>Total: <span id="carrito-total">$0 COP</span></h3>
+        <button id="comprar-btn" class="comprar-btn">Finalizar Compra</button>
+    </div>
+</div>
+
   <!-- Encabezado -->
   <header>
     <div class="container">
@@ -133,6 +151,9 @@
   <footer>
     <p>© 2025 Cámara Shop. Todos los derechos reservados.</p>
   </footer>
+
+ <script src="carrito.js"></script> 
+
 </body>
 
 </html>
