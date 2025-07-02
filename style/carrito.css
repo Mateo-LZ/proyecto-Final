@@ -1,0 +1,157 @@
+/* --- ESTILOS DEL CARRITO DE COMPRAS --- */
+
+/* Overlay para oscurecer el fondo cuando el carrito está abierto */
+.carrito-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+
+.carrito-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenedor principal del carrito */
+.carrito-container {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Inicia oculto fuera de la pantalla */
+    width: 380px;
+    height: 100%;
+    background-color: #2c2c2c;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s ease-in-out;
+}
+
+/* Esta es la regla CLAVE que hace visible el carrito */
+.carrito-container.visible {
+    right: 0; /* Lo mueve a una posición visible */
+}
+
+/* Encabezado del carrito */
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #444;
+    color: #f5f5f5;
+}
+
+.carrito-header h2 {
+    margin: 0;
+}
+
+.cerrar-carrito-btn {
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.cerrar-carrito-btn:hover {
+    color: #ff6b6b;
+    transform: rotate(90deg);
+}
+
+/* Lista de items en el carrito */
+.carrito-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+.carrito-item:last-child {
+    border-bottom: none;
+}
+
+.carrito-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.carrito-item-info {
+    flex-grow: 1;
+    color: #f5f5f5;
+}
+
+.carrito-item-info h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+.carrito-item-info span {
+    font-weight: bold;
+    color: #1b90ff;
+}
+
+.quitar-item-btn {
+    background: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.quitar-item-btn:hover {
+    background: #ff5252;
+}
+
+/* Pie de página del carrito */
+.carrito-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #444;
+    background: #1f1f1f;
+}
+
+.carrito-footer h3 {
+    color: #f5f5f5;
+    margin: 0 0 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comprar-btn {
+    background: linear-gradient(45deg, #1b90ff, #3a7bd5);
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.comprar-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(27, 144, 255, 0.4);
+}
