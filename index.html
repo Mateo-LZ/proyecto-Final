@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tu Tienda de Tecnología</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/carrito.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="logo">TechStore</a>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" id="ver-carrito" class="cart-icon" title="Carrito de compras">
+                🛒<span id="contador-carrito">0</span>
+                </a>
+                <a href="/view/login.html" class="login-btn">Iniciar Sesión</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carrito-overlay" class="carrito-overlay"></div>
+<div id="carrito" class="carrito-container">
+    <div class="carrito-header">
+        <h2>Tu Carrito 🛒</h2>
+        <button id="cerrar-carrito" class="cerrar-carrito-btn" title="Cerrar">&times;</button>
+    </div>
+    <div id="carrito-items" class="carrito-items"></div>
+    <div class="carrito-footer">
+        <h3>Total: <span id="carrito-total">$0 COP</span></h3>
+        <button id="comprar-btn" class="comprar-btn">Finalizar Compra</button>
+    </div>
+</div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h1>Bienvenido a TechStore</h1>
+                <p>La mejor tecnología al mejor precio. Encuentra todo lo que necesitas en un solo lugar.</p>
+                <a href="#catalogo" class="cta-button">Explorar Catálogo</a>
+            </div>
+            <div class="hero-animation">
+                <div class="floating-icon">💻</div>
+                <div class="floating-icon">📱</div>
+                <div class="floating-icon">🎮</div>
+                <div class="floating-icon">📺</div>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section class="catalog-section" id="catalogo">
+            <div class="container">
+                <h2 class="section-title">Catálogo Completo</h2>
+                <div class="catalog-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">🎧</span>
+                        </div>
+                        <h3>Audífonos</h3>
+                        <p>Sonido premium, inalámbricos y con cancelación de ruido</p>
+                        <a href="view/audifonos.html" class="product-button">Ver Audífonos</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">📷</span>
+                        </div>
+                        <h3>Cámaras</h3>
+                        <p>Profesionales, deportivas y para vlogging</p>
+                        <a href="view/camara.html" class="product-button">Ver Camaras</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">📱</span>
+                        </div>
+                        <h3>Celulares</h3>
+                        <p>Últimos modelos de todas las marcas principales</p>
+                        <a href="view/celular.html" class="product-button">Ver Celulares</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">💻</span>
+                        </div>
+                        <h3>Computadores</h3>
+                        <p>Gaming, oficina y profesionales de alto rendimiento</p>
+                        <a href="view/computador.html" class="product-button">Ver Computadores</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">🖥️</span>
+                        </div>
+                        <h3>Monitores</h3>
+                        <p>4K, gaming, ultrawide y profesionales</p>
+                        <a href="view/monitor.html" class="product-button">Ver Monitores</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">🎮</span>
+                        </div>
+                        <h3>Nintendo Switch</h3>
+                        <p>Consolas, juegos y accesorios Nintendo</p>
+                        <a href="view/nintendoSwitch.html" class="product-button">Ver Nintendo</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">🎯</span>
+                        </div>
+                        <h3>PlayStation</h3>
+                        <p>PS5, PS4, juegos y accesorios</p>
+                        <a href="view/playStation.html" class="product-button">Ver Play PlayStation</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">📺</span>
+                        </div>
+                        <h3>Smart TV</h3>
+                        <p>4K, 8K, OLED y todas las funciones inteligentes</p>
+                        <a href="view/smartTv.html" class="product-button">Ver smartTv</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">⌚</span>
+                        </div>
+                        <h3>Smart Watch</h3>
+                        <p>Relojes inteligentes con monitoreo de salud</p>
+                        <a href="view/smartwatch.html" class="product-button">Ver Smartwatch</a>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <span class="product-emoji">📱</span>
+                        </div>
+                        <h3>Tablets</h3>
+                        <p>iPad, Android y Windows para trabajo y entretenimiento</p>
+                        <a href="view/tablet.html" class="product-button">Ver Tablets</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">¿Por qué elegir TechStore?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚚</div>
+                        <h3>Envío Gratis</h3>
+                        <p>Envío gratuito en compras superiores a $200.000</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Garantía Extendida</h3>
+                        <p>Garantía extendida en todos nuestros productos</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📞</div>
+                        <h3>Soporte 24/7</h3>
+                        <p>Atención al cliente las 24 horas del día</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Compra Segura</h3>
+                        <p>Transacciones 100% seguras y protegidas</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Recibe tus productos en tiempo récord</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Tu tienda de confianza para tecnología de vanguardia. Calidad, precio y servicio excepcional.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#">Computadores</a></li>
+                        <li><a href="#">Celulares</a></li>
+                        <li><a href="#">Gaming</a></li>
+                        <li><a href="#">Smart Home</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📧 info@techstore.com</li>
+                        <li>📞 +57 300 123 4567</li>
+                        <li>📍 Armenia, Quindío</li>
+                        <li>🕒 Lun-Sáb 9AM-7PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#">📘 Facebook</a>
+                        <a href="#">📷 Instagram</a>
+                        <a href="#">🐦 Twitter</a>
+                        <a href="#">📺 YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="chatbot-toggle">💬</div>
+
+    <div id="chatbot-box" class="hidden">
+        <div id="chatbot-header">TechBot 🤖</div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Escribe tu pregunta..." />
+            <button id="chatbot-send">Enviar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+     <script src="view/carrito.js"></script> 
+</body>
+
+</html>

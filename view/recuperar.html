@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recuperar Contraseña</title>
+  <link rel="stylesheet" href="/style/iniciarSesion.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Panel izquierdo visual -->
+    <div class="left-panel">
+      <div class="overlay"></div>
+      <div class="carousel">
+        <img src="/assets/iniciarsesion.png" alt="Seguridad" />
+      </div>
+    </div>
+
+    <!-- Panel derecho con formulario -->
+    <div class="right-panel">
+      <div class="login-box">
+        <h2>Recuperar Contraseña</h2>
+
+        <input type="text" id="recoverUser" placeholder="Nombre de usuario" />
+        <button onclick="loadSecurityQuestion()">Continuar</button>
+
+        <div id="securitySection" style="display: none;">
+          <p id="securityQuestionText"></p>
+          <input type="text" id="recoverAnswer" placeholder="Respuesta a la pregunta" />
+          <button onclick="validateAnswer()">Validar</button>
+        </div>
+
+        <div id="resetSection" style="display: none;">
+          <input type="password" id="newPassword" placeholder="Nueva contraseña" />
+          <button onclick="resetPassword()">Guardar nueva contraseña</button>
+        </div>
+
+        <p id="message"></p>
+        <br />
+        <a href="login.html">Volver al inicio de sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="recuperar.js"></script>
+</body>
+</html>
