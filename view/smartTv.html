@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda de Cámaras</title>
-  <link rel="stylesheet" href="/style/camara.css" />
+  <title>Tienda Smart TV</title>
+  <link rel="stylesheet" href="/style/smartTv.css" />
   <link rel="stylesheet" href="../style/carrito.css">
 
 </head>
@@ -23,7 +23,7 @@
         <a href="#" id="ver-carrito" class="cart-icon" title="Carrito de compras">
         🛒<span id="contador-carrito">0</span>
         </a>
-        <a href="/templates/login.html" class="login-btn">Iniciar Sesión</a>
+        <a href="/view/login.html" class="login-btn">Iniciar Sesión</a>
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -33,7 +33,7 @@
     </div>
   </nav>
 
-<div id="carrito-overlay" class="carrito-overlay"></div>
+  <div id="carrito-overlay" class="carrito-overlay"></div>
 <div id="carrito" class="carrito-container">
     <div class="carrito-header">
         <h2>Tu Carrito 🛒</h2>
@@ -49,7 +49,7 @@
   <!-- Encabezado -->
   <header>
     <div class="container">
-      <h1>Cámara Shop 📸</h1>
+      <h1>Smart TV Shop 📺</h1>
       <nav>
         <ul>
           <li><a href="#productos">Productos</a></li>
@@ -58,13 +58,12 @@
     </div>
   </header>
 
-  <!-- Banner -->
-  <!-- Banner -->
+  <!-- Banner con video -->
   <section class="banner">
     <div class="container">
       <video autoplay muted loop playsinline>
-        <source src="/assets/camara2video.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de video.
+        <source src="/assets/SMARTVvideo.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
       </video>
     </div>
   </section>
@@ -74,85 +73,89 @@
     <div class="container">
       <h2>Nuestros Productos</h2>
       <div class="producto-grid">
+
         <!-- Producto 1 -->
         <div class="producto">
-          <img src="/assets/Canon EOS R50.webp" alt="Canon EOS R50" />
-          <h3>Canon EOS R50</h3>
-          <p>Cámara Mirrorless 24.2MP, 4K, Wi-Fi, lente 18-45mm.</p>
-          <span>$3.199.000 COP</span>
+          <img src="/assets/LG OLED C2 55.jpg" alt="LG OLED C2" />
+          <h3>LG OLED C2 55"</h3>
+          <p>4K OLED, Dolby Vision, webOS, AI Processor.</p>
+          <span>$4.199.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 2 -->
         <div class="producto">
-          <img src="/assets/Sony Alpha A6400.webp" alt="Sony A6400" />
-          <h3>Sony Alpha A6400</h3>
-          <p>24.2MP, autoenfoque rápido, 4K HDR, pantalla abatible.</p>
-          <span>$4.290.000 COP</span>
+          <img src="/assets/Samsung QLED 55.webp" alt="Samsung QLED" />
+          <h3>Samsung QLED 55"</h3>
+          <p>4K QLED, Quantum HDR, Tizen, Alexa integrado.</p>
+          <span>$3.899.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 3 -->
         <div class="producto">
-          <img src="/assets/Nikon D3500 DSLR.jpg" alt="Nikon D3500" />
-          <h3>Nikon D3500 DSLR</h3>
-          <p>24.2MP, lente 18-55mm, ideal para principiantes.</p>
-          <span>$2.050.000 COP</span>
+          <img src="/assets/Sony Bravia XR 65.webp" alt="Sony Bravia" />
+          <h3>Sony Bravia XR 65"</h3>
+          <p>Google TV, XR Triluminos, Dolby Atmos.</p>
+          <span>$5.299.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 4 -->
         <div class="producto">
-          <img src="/assets/bolso camara.avif" alt="Mochila" />
-          <h3>Mochila Fotográfica</h3>
-          <p>Espacio para cámara, lentes y accesorios. Impermeable.</p>
-          <span>$199.000 COP</span>
+          <img src="/assets/TCL 50 4K Android TV.webp" alt="TCL Android TV" />
+          <h3>TCL 50" 4K Android TV</h3>
+          <p>Control por voz, Google Play, Netflix.</p>
+          <span>$1.899.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
+
         <!-- Producto 5 -->
         <div class="producto">
-          <img src="/assets/Lente Canon EF 50mm.webp" alt="Lente Canon 50mm" />
-          <h3>Lente Canon EF 50mm f/1.8</h3>
-          <p>Lente fijo ideal para retratos con excelente desenfoque.</p>
-          <span>$520.000 COP</span>
+          <img src="/assets/Hisense 55 ULED.jpg" alt="Hisense" />
+          <h3>Hisense 55" ULED</h3>
+          <p>Dolby Vision HDR10+, sistema Vidaa U6.</p>
+          <span>$2.199.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 6 -->
         <div class="producto">
-          <img src="/assets/Trípode Profesional.webp" alt="Trípode" />
-          <h3>Trípode Profesional</h3>
-          <p>Altura ajustable, cabezal giratorio y compatible con DSLR.</p>
-          <span>$169.000 COP</span>
+          <img src="/assets/TV Roku 43 FHD.webp" alt="Roku TV" />
+          <h3>TV Roku 43" FHD</h3>
+          <p>FHD, acceso directo a Netflix, Disney+, YouTube.</p>
+          <span>$1.099.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 7 -->
         <div class="producto">
-          <img src="/assets/Tarjeta SD 128GB Sandisk.webp" alt="SD 128GB" />
-          <h3>Tarjeta SD 128GB Sandisk</h3>
-          <p>Alta velocidad UHS-I para grabación en 4K.</p>
-          <span>$95.000 COP</span>
+          <img src="/assets/Soporte de Pared Universal.webp" alt="Soporte de TV" />
+          <h3>Soporte de Pared Universal</h3>
+          <p>Compatible de 32" a 70", inclinable.</p>
+          <span>$69.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
 
         <!-- Producto 8 -->
         <div class="producto">
-          <img src="/assets/Kit de Limpieza Profesional.jpg" alt="Kit limpieza" />
-          <h3>Kit de Limpieza Profesional</h3>
-          <p>Incluye soplador, paño, pincel y líquido especial.</p>
+          <img src="/assets/Control Remoto Universal.webp" alt="Control universal" />
+          <h3>Control Remoto Universal</h3>
+          <p>Compatible con Samsung, LG, Sony, Philips.</p>
           <span>$45.000 COP</span>
           <button>Agregar al carrito</button>
         </div>
+
       </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Cámara Shop. Todos los derechos reservados.</p>
+    <p>© 2025 Smart TV Shop. Todos los derechos reservados.</p>
   </footer>
 
- <script src="carrito.js"></script> 
+   <script src="carrito.js"></script> 
 
 </body>
 
