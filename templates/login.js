@@ -37,7 +37,15 @@ async function loginUser() {
   if (userData && userData.password === hashedInputPassword) {
     localStorage.setItem('sessionActive', 'true');
     localStorage.setItem('sessionUser', name);
-    showMessage(`Bienvenido, ${name}`);
+    showMessage(`✅ Bienvenido, ${name}`);
+    
+    // --- REDIRECCIÓN AUTOMÁTICA A INICIO ---
+    // Espera 1.5 segundos y luego redirige al usuario.
+    setTimeout(() => {
+        window.location.href = '/index.html'; // Asegúrate que esta ruta sea correcta
+    }, 1500);
+    // -----------------------------------------
+
     if (savedNameDisplay) {
       savedNameDisplay.textContent = `✅ Sesión activa como: ${name}`;
     }
