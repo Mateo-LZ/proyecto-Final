@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="iniciarSesion.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Panel izquierdo visual (opcional) -->
+    <div class="left-panel">
+      <div class="overlay"></div>
+      <div class="carousel">
+        <img src="/assets/iniciarsesion.png" alt="Imagen de fondo" />
+      </div>
+    </div>
+
+    <!-- Panel derecho con formulario -->
+    <div class="right-panel">
+      <div class="login-box">
+        <h2>Iniciar Sesión</h2>
+
+        <input type="text" id="loginUsername" placeholder="Nombre de usuario" />
+        <input type="password" id="loginPassword" placeholder="Contraseña" />
+        <button id="loginButton">Ingresar</button>
+
+        <p id="message"></p>
+
+        <br>
+        <a href="recuperar.html">¿Olvidaste tu contraseña?</a><br>
+        <a href="registro.html">¿No tienes cuenta? Regístrate</a>
+
+        <div id="savedNameDisplay" style="margin-top: 20px; font-weight: bold;"></div>
+        <button id="logoutButton" style="margin-top: 10px;">Cerrar sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

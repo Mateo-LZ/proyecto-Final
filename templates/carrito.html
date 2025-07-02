@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style/carrito.css">
+    <script src="../app.js" async></script>
+    <title>TechStore - Catálogo Tecnológico</title>
+</head>
+
+<body>
+    <!-- Header con carrito -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="main-title">
+                <a href="./catalogo.html" class="title-link">TechStore</a>
+            </h1>
+            <button class="cart-toggle" onclick="toggleCarrito()">
+                <i class="fas fa-shopping-cart"></i>
+                Carrito
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Overlay del carrito -->
+    <div class="cart-overlay" onclick="cerrarCarrito()"></div>
+
+    <!-- Carrito lateral -->
+    <div class="carrito">
+        <div class="carrito-header">
+            <h2>Carrito de Compras</h2>
+            <button class="carrito-close" onclick="cerrarCarrito()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="carrito-items"></div>
+        <div class="carrito-footer">
+            <div class="carrito-total">
+                <span>Total:</span>
+                <span class="carrito-precio-total">$0 COP</span>
+            </div>
+            <button class="btn-pagar">Pagar Ahora</button>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="catalog-title">Catálogo</h2>
+            <p class="catalog-subtitle">Los mejores equipos al mejor precio</p>
+
+            <!-- Celulares -->
+            <div class="contenedor-items">
+                <!-- iPhone 16 -->
+                <div class="item">
+                    <img src="../assets/IphoneMax.png" alt="iPhone 16" class="img-item">
+                    <h3 class="titulo-item">iPhone 16</h3>
+                    <p class="descripcion-item">El iPhone más avanzado con chip A17 Pro y cámara de 48MP</p>
+                    <ul class="specs-list">
+                        <li>Pantalla Super Retina XDR 6.1"</li>
+                        <li>Chip A17 Pro</li>
+                        <li>Cámara principal 48MP</li>
+                        <li>128GB de almacenamiento</li>
+                        <li>5G ultrarrápido</li>
+                    </ul>
+                    <p class="precio-item">$4,200,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+
+                <!-- Xiaomi 14 -->
+                <div class="item">
+                    <img src="../assets/xiomi.png" alt="Xiaomi 14" class="img-item">
+                    <h3 class="titulo-item">Xiaomi 14</h3>
+                    <p class="descripcion-item">Potencia flagship con procesador Snapdragon 8 Gen 3</p>
+                    <ul class="specs-list">
+                        <li>Pantalla AMOLED 6.36" 120Hz</li>
+                        <li>Snapdragon 8 Gen 3</li>
+                        <li>Cámara Leica 50MP</li>
+                        <li>256GB de almacenamiento</li>
+                        <li>Carga rápida 90W</li>
+                    </ul>
+                    <p class="precio-item">$2,800,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+
+                <!-- Galaxy S24 -->
+                <div class="item">
+                    <img src="../assets/samsung.png" alt="Galaxy S24" class="img-item">
+                    <h3 class="titulo-item">Galaxy S24</h3>
+                    <p class="descripcion-item">Experiencia Galaxy AI con cámara profesional</p>
+                    <ul class="specs-list">
+                        <li>Pantalla Dynamic AMOLED 6.2"</li>
+                        <li>Exynos 2400</li>
+                        <li>Cámara triple 50MP</li>
+                        <li>128GB de almacenamiento</li>
+                        <li>Galaxy AI integrada</li>
+                    </ul>
+                    <p class="precio-item">$3,500,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <!-- Computadores -->
+            <div class="contenedor-items">
+                <!-- MacBook Pro 14 -->
+                <div class="item">
+                    <img src="../assets/macCompu.png" alt="MacBook Pro 14" class="img-item">
+                    <h3 class="titulo-item">MacBook Pro 14</h3>
+                    <p class="descripcion-item">El portátil más potente de Apple con chip M3 Pro</p>
+                    <ul class="specs-list">
+                        <li>Pantalla Liquid Retina XDR 14.2"</li>
+                        <li>Chip Apple M3 Pro</li>
+                        <li>18GB de RAM unificada</li>
+                        <li>512GB SSD</li>
+                        <li>Batería hasta 18 horas</li>
+                    </ul>
+                    <p class="precio-item">$8,500,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+
+                <!-- ASUS ROG Strix G15 -->
+                <div class="item">
+                    <img src="../assets/assus.png" alt="ASUS ROG Strix G15" class="img-item">
+                    <h3 class="titulo-item">ASUS ROG Strix G15</h3>
+                    <p class="descripcion-item">Laptop gaming de alto rendimiento con RTX 4060</p>
+                    <ul class="specs-list">
+                        <li>Pantalla FHD 15.6" 144Hz</li>
+                        <li>Intel Core i7-13650HX</li>
+                        <li>NVIDIA RTX 4060 8GB</li>
+                        <li>16GB RAM DDR5</li>
+                        <li>1TB SSD NVMe</li>
+                    </ul>
+                    <p class="precio-item">$4,200,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+
+                <!-- Acer Nitro 5 -->
+                <div class="item">
+                    <img src="../assets/acer.png" alt="Acer Nitro 5" class="img-item">
+                    <h3 class="titulo-item">Acer Nitro 5</h3>
+                    <p class="descripcion-item">Laptop gamer equilibrado para todo tipo de juegos</p>
+                    <ul class="specs-list">
+                        <li>Pantalla 15.6" FHD 144Hz</li>
+                        <li>Intel Core i5 + RTX 4060</li>
+                        <li>16GB RAM DDR4</li>
+                        <li>512GB SSD</li>
+                        <li>Teclado retroiluminado RGB</li>
+                    </ul>
+                    <p class="precio-item">$2,100,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <!-- Tablets -->
+            <div class="contenedor-items">
+                <!-- iPad Pro -->
+                <div class="item">
+                    <img src="../assets/ipad45.png" alt="iPad Pro" class="img-item">
+                    <h3 class="titulo-item">iPad Pro</h3>
+                    <p class="descripcion-item">La tablet más potente de Apple con chip M2 y pantalla Liquid Retina XDR
+                    </p>
+                    <ul class="specs-list">
+                        <li>Pantalla Liquid Retina XDR 12.9"</li>
+                        <li>Chip Apple M2</li>
+                        <li>8GB RAM</li>
+                        <li>256GB de almacenamiento</li>
+                        <li>Compatible con Apple Pencil</li>
+                    </ul>
+                    <p class="precio-item">$4,800,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+
+                <!-- Huawei MatePad -->
+                <div class="item">
+                    <img src="../assets/huawei.png" alt="Huawei MatePad 11.5" class="img-item">
+                    <h3 class="titulo-item">Huawei MatePad 11.5"</h3>
+                    <p class="descripcion-item">Tablet Huawei con excelente pantalla y rendimiento</p>
+                    <ul class="specs-list">
+                        <li>Pantalla FullView 11.5" 2.8K</li>
+                        <li>Snapdragon 7 Gen 1</li>
+                        <li>8GB RAM</li>
+                        <li>128GB de almacenamiento</li>
+                        <li>Compatible con M-Pencil</li>
+                    </ul>
+                    <p class="precio-item">$1,800,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+
+                <!-- Lenovo Tab P11 Plus -->
+                <div class="item">
+                    <img src="../assets/lenovo.png" alt="Lenovo Tab P11 Plus" class="img-item">
+                    <h3 class="titulo-item">Lenovo Tab P11 Plus</h3>
+                    <p class="descripcion-item">Tablet versátil con pantalla 2K y gran rendimiento</p>
+                    <ul class="specs-list">
+                        <li>Pantalla IPS 11" 2K</li>
+                        <li>MediaTek Helio G90T</li>
+                        <li>6GB RAM</li>
+                        <li>128GB de almacenamiento</li>
+                        <li>Cuatro altavoces JBL</li>
+                    </ul>
+                    <p class="precio-item">$1,200,000</p>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+
+
+                <!-- Consolas -->
+                <div class="contenedor-items">
+                    <!-- PlayStation 5 -->
+                    <div class="item">
+                        <img src="../assets/play5.png" alt="PlayStation 5" class="img-item">
+                        <h3 class="titulo-item">PlayStation 5</h3>
+                        <p class="descripcion-item">La consola de próxima generación con gráficos 4K y ray tracing</p>
+                        <ul class="specs-list">
+                            <li>Procesador AMD Zen 2 de 8 núcleos</li>
+                            <li>GPU AMD RDNA 2</li>
+                            <li>16GB RAM GDDR6</li>
+                            <li>825GB SSD ultra rápido</li>
+                            <li>Compatibilidad con 4K y ray tracing</li>
+                        </ul>
+                        <p class="precio-item">$2,800,000</p>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                </div>
+
+                <div class="contenedor-items">
+                    <!-- PlayStation 5 -->
+                    <div class="item">
+                        <img src="../assets/xbox.png" alt="Xbox Series X" class="img-item">
+                        <h3 class="titulo-item">Xbox Series X</h3>
+                        <p class="descripcion-item">La consola Xbox más potente con 12 teraflops de potencia</p>
+                        <ul class="specs-list">
+                            <li>Procesador AMD Zen 2 de 8 núcleos</li>
+                            <li>GPU AMD RDNA 2 - 12 teraflops</li>
+                            <li>16GB RAM GDDR6</li>
+                            <li>1TB SSD NVMe</li>
+                            <li>Compatibilidad con 4K 120fps</li>
+                        </ul>
+                        <p class="precio-item">$2,600,000</p>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                </div>
+
+
+            </div> <!-- Cierre .container -->
+    </main>
+</body>
+
+</html>
