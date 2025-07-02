@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  /* Encabezado */
+  header {
+    background: #1e1e2f;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav a:hover {
+    color: #00aaff;
+  }
+  
+  /* Banner con video */
+  .banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 30px 0;
+  }
+  
+  .banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+  
+  .banner-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .banner-text p {
+    font-size: 1.1rem;
+  }
+  
+  /* Sección de productos */
+  .productos {
+    padding: 40px 0;
+    background: #181818;
+  }
+  
+  .productos h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .producto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .producto {
+    background: #232323;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    transition: transform 0.3s;
+  }
+  
+  .producto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .producto h3 {
+    margin: 10px 0;
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+  
+  .producto p {
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+  
+  .producto span {
+    display: block;
+    margin: 8px 0;
+    color: #00aaff;
+    font-weight: bold;
+  }
+  
+  .producto button {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .producto button:hover {
+    background: #007acc;
+  }
+  
+  /* Footer */
+  footer {
+    background: #1e1e2f;
+    color: #cccccc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .banner-text h2 {
+      font-size: 1.5rem;
+    }
+  
+    .banner-text p {
+      font-size: 0.95rem;
+    }
+  
+    .producto img {
+      height: 180px;
+    }
+  }
+  
