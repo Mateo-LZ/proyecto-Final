@@ -13,7 +13,7 @@ document.getElementById("chatbot-send").addEventListener("click", async () => {
   input.value = "";
 
   try {
-    const res = await fetch("http://localhost:3000/api/mistral", {
+    const res = await fetch("/api/mistral", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: pregunta })
