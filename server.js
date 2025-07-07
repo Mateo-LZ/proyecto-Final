@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -6,20 +7,21 @@ const fetch = require("node-fetch");
 const app = express();
 const PORT = 3000;
 
-// MIDDLEWARES
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static("./")); // Sirve archivos como index.html
+app.use(express.static("./"));
 
-// RUTA PARA LLAMAR A LA API DE MISTRAL
 app.post("/api/mistral", async (req, res) => {
   const { prompt } = req.body;
+
+   // Log para verificar si la clave está definida
+  console.log("🔑 Clave Mistral:", process.env.MISTRAL_API_KEY ? "Sí está definida" : "❌ No está definida");
 
   try {
     const response = await fetch("https://api.mistral.ai/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer qu0F80ZDE9THEDWZxBaTC7vLHo5pU5Su", // Reemplaza con tu clave real
+        "Authorization": `Bearer ${process.env.MISTRAL_API_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
